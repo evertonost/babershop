@@ -1,0 +1,24 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Pi_Barbershop" parent="Theme.MaterialComponents.DayNight.NoActionBar"> <!-- Troque DarkActionBar por NoActionBar -->
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/black</item>
+        <item name="colorPrimaryVariant">@color/transparente</item>
+        <item name="colorOnPrimary">@color/transparente</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/transparente</item>
+        <item name="colorSecondaryVariant">@color/transparente</item>
+        <item name="colorOnSecondary">@color/transparente</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">@android:color/black</item>
+        <item name="android:navigationBarColor">@android:color/black</item>
+    </style>
+
+    <style name="Theme.Pi_Barbershop.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Pi_Barbershop.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.Pi_Barbershop.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

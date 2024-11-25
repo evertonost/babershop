@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".FormLoginFragment">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/fundoimg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <View
+            android:id="@+id/containerComponentes"
+            style="@style/ContainerComponents_cadastro"
+            android:layout_width="400dp"
+            android:layout_height="502dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.454"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logo"
+            app:layout_constraintVertical_bias="0.209" />
+
+
+        <ImageButton
+            android:id="@+id/btn2"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="40dp"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/containerComponentes"
+            app:srcCompat="@drawable/ic_servico" />
+
+        <TextView
+            android:id="@+id/txtCadastrarservico"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="40dp"
+            android:gravity="center"
+            android:text="Cadastrar Serviço"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/btn2"
+            app:layout_constraintTop_toTopOf="@id/containerComponentes" />
+
+
+        <EditText
+            android:id="@+id/DescServico"
+            style="@style/Edit_text_cadastro"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="28dp"
+            android:hint="Descricão do Serviço"
+            android:inputType="textAutoComplete"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textCursorDrawable="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btn2" />
+
+        <EditText
+            android:id="@+id/edit_codigo"
+            style="@style/Edit_text_cadastro"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:hint="Codigo Serviço"
+            android:inputType="number"
+            android:textColor="@color/white"
+            android:focusable="false"
+            android:clickable="false"
+            android:textColorHint="@color/white"
+            android:textCursorDrawable="@color/white"
+            app:layout_constraintStart_toStartOf="@+id/containerComponentes"
+            app:layout_constraintTop_toBottomOf="@id/DescServico"
+            tools:ignore="MissingConstraints" />
+
+
+
+        <Spinner
+            android:id="@+id/editTempo"
+            android:layout_width="240dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/transparente"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit_codigo" />
+
+
+        <EditText
+            android:id="@+id/editComissao"
+            style="@style/Edit_text_cadastro_meio"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:hint="Comissão"
+            android:inputType="numberDecimal"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textCursorDrawable="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintTop_toBottomOf="@id/editTempo" />
+
+
+        <EditText
+            android:id="@+id/editPreco"
+            style="@style/Edit_text_cadastro_meio"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:hint="Preço do Serviço"
+            android:inputType="textAutoComplete"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textCursorDrawable="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editTempo" />
+
+        <ImageView
+            android:id="@+id/imagem_Perfil"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="120dp"
+            android:clipToOutline="true"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.517"
+            app:layout_constraintStart_toEndOf="@+id/editTempo"
+            app:layout_constraintTop_toTopOf="@id/containerComponentes"
+            app:srcCompat="@drawable/logo" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_foto"
+            style="@style/btn_foto"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="@string/btn_foto"
+            app:layout_constraintStart_toEndOf="@+id/editTempo"
+            app:layout_constraintTop_toBottomOf="@id/imagem_Perfil" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_excluir"
+            style="@style/btn_cadastrar"
+            android:layout_marginTop="60dp"
+            android:text="Cadastrar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editPreco" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
+

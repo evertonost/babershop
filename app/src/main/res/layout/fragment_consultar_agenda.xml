@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/fundoimg">
+
+        <!-- Título de Cadastro de Horários -->
+        <TextView
+            android:id="@+id/tituloHorario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Colsulta  Horários de Atendimento"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="20dp" />
+
+
+        <TextView
+            android:id="@+id/tituloData"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selecione a data:"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_marginBottom="10dp"
+            android:gravity="center" />
+
+        <DatePicker
+            android:id="@+id/datePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:datePickerMode="calendar"
+            app:theme="@style/CustomDatePickerDialog"
+            android:background="@color/tBlack"
+            android:visibility="visible" >
+
+        </DatePicker>
+
+
+        <TextView
+            android:id="@+id/tituloHorarios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Selecione os horários disponíveis:"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_marginBottom="10dp" />
+
+
+        <GridLayout
+            android:id="@+id/horariosLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:button="@drawable/checkbox_selector"
+            android:columnCount="4"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+        </GridLayout>
+        <Button
+            android:id="@+id/botaoHorario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/botao_selector"
+            android:text="Horário"
+            android:textColor="@color/black" />
+
+
+        <Button
+            android:id="@+id/btSalvarHorarios"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Salvar Horários"
+            android:textSize="18sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:backgroundTint="@color/Azul"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="40dp" />
+
+    </LinearLayout>
+</ScrollView>

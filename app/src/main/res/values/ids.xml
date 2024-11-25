@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="action_telaCadastroFragment_to_telaClienteFragment" type="id" />
+    <item name="action_telaCadastroFragment_to_telaFuncionarioFragment" type="id" />
+    <item name="action_telaCadastroFragment_to_telaServicoFragment" type="id" />
+    <item name="action_telaCadastroFragment_to_telaProdutoFragment" type="id" />
+</resources>

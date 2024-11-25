@@ -1,0 +1,7 @@
+<!-- res/drawable/rounded_button.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <solid android:color="@color/horariosdisponiveis" />
+    <corners android:radius="8dp" /> <!-- Ajuste o valor conforme necessário -->
+
+</shape>

@@ -1,0 +1,5 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_selected="true" android:drawable="@color/Azul" /> <!-- Cor quando selecionado -->
+    <item android:state_enabled="false" android:drawable="@color/horariosindisponiveis" /> <!-- Cor quando desabilitado -->
+    <item android:drawable="@color/horariosdisponiveis" /> <!-- Cor padrão -->
+</selector>

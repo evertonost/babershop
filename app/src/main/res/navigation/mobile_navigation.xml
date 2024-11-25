@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="everton.ost.pi_barbershop.ui.home.HomeFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_home" />
+
+
+
+  <activity
+        android:id="@+id/nav_cadastro"
+        android:name="everton.ost.pi_barbershop.ui.cadastro.CadastroActivity"
+        android:label="Cadastro"
+        tools:layout="@layout/activity_cadastro"
+       />
+
+
+    <fragment
+
+        android:id="@+id/nav_cadastro_produto"
+        android:name="everton.ost.pi_barbershop.ui.consulta.geralProduto.CadastroProdutoFragment"
+        android:label="Cadastro"
+        tools:layout="@layout/fragment_cadastro_produto"
+        />
+
+
+    <fragment
+        android:id="@+id/nav_agenda"
+        android:name="everton.ost.pi_barbershop.ui.geralAgenda.AgendaFragment"
+        android:label="@string/menu_agenda"
+        tools:layout="@layout/fragment_agenda" />
+  <fragment
+      android:id="@+id/nav_consulta_agendamento"
+      android:name="everton.ost.pi_barbershop.ui.geralAgenda.ConsultaAgendamentosFragment"
+      android:label=" Agendamento"
+      tools:layout="@layout/fragment_consulta_agendamentos" />
+  <fragment
+      android:id="@+id/nav_agenda_consulta"
+      android:name="everton.ost.pi_barbershop.ui.geralAgenda.ConsultarAgendaHorariosFragment"
+      android:label="Consulta Agenda"
+      tools:layout="@layout/fragment_consultar_agenda" />
+
+
+  <!--Nanvegação entre telas de consulta -->
+  <fragment
+      android:id="@id/nav_consulta_tela"
+      android:name="everton.ost.pi_barbershop.ui.consulta.Tela_consulta"
+      android:label="Consulta"
+      tools:layout="@layout/fragment_tela_consulta" />
+
+  <fragment
+      android:id="@+id/nav_consulta_cadastro_cliente"
+      android:name="everton.ost.pi_barbershop.ui.consulta.geralCliente.ConsultaCadastroClienteFragment"
+      android:label="Consulta Cadastro"
+      tools:layout="@layout/fragment_consulta_cadastro_cliente"/>
+
+  <fragment
+
+      android:id="@+id/nav_consulta_cadastro_funcionario"
+      android:name="everton.ost.pi_barbershop.ui.consulta.geralCliente.Consulta_cadastro_funcionarioFragment"
+      android:label="Consulta Cadastro Funcionario"
+      tools:layout="@layout/fragment_consulta_cadastro_funcionario"/>
+
+  <fragment
+      android:id="@+id/consutaProdutoFragment"
+      android:name="ConsultaCadastroProduto"
+      android:label="Consulta de Produto"
+      tools:layout="@layout/fragment_consulta__produto" />
+
+
+  <fragment
+      android:id="@+id/consutaServicoFragment"
+      android:name="everton.ost.pi_barbershop.ui.consulta.geralServico.ServicoConsulta"
+      android:label="Consulta de Serviços"
+      tools:layout="@layout/fragment_consulta_servico" />
+
+  <action
+      android:id="@+id/action_telaConsultaFragment_to_telaconsultacadastroFragment"
+      app:destination="@id/nav_consulta_cadastro_cliente" />
+  <action
+      android:id="@+id/action_telaConsultaFragment_to_telaconsultacadastroFuncionarioFragment"
+      app:destination="@id/nav_consulta_cadastro_funcionario" />
+
+  <action
+      android:id="@+id/action_telaConsultaFragment_to_nav_consulta_produto"
+      app:destination="@id/consutaProdutoFragment" />
+  <action
+      android:id="@+id/action_telaConsultaFragment_to_nav_consulta_servico"
+      app:destination="@id/consutaServicoFragment" />
+
+<!--Nanvegação entre telas de cadastro -->
+
+  <fragment
+      android:id="@+id/telaServicoFragment"
+      android:name="everton.ost.pi_barbershop.ui.consulta.geralProduto.CadastroServicoFragment"
+      android:label="Cadastro de Serviços"
+      tools:layout="@layout/fragment_cadastro_servico" />
+  <fragment
+      android:id="@+id/telaProdutoFragment"
+      android:name="everton.ost.pi_barbershop.ui.consulta.geralProduto.CadastroProdutoFragment"
+      android:label="Cadastro de Produtos"
+      tools:layout="@layout/fragment_cadastro_produto" />
+  <fragment
+    android:id="@+id/cadastro_funcionario"
+    android:name="everton.ost.pi_barbershop.ui.cadastro.Cadastro_funcionario"
+    android:label="Cadastro de Funcionario"
+    tools:layout="@layout/fragment_cadastro_funcionario" />
+  <fragment
+      android:id="@+id/cadastro_cliente1"
+      android:name="everton.ost.pi_barbershop.ui.cadastro.cadastro_cliente1"
+      android:label="Cadastro de Cliente"
+      tools:layout="@layout/fragment_cadastro_cliente1" />
+
+
+
+  <fragment
+      android:id="@+id/nav_cadastro_tela"
+      android:name="everton.ost.pi_barbershop.ui.cadastro.TelaCadastroFragment"
+      android:label="Cadastro"
+      tools:layout="@layout/fragment_tela_cadastro">
+
+
+    <action
+        android:id="@+id/action_telaCadastroFragment_to_telaServicoFragment"
+        app:destination="@id/telaServicoFragment" />
+    <action
+        android:id="@+id/action_telaCadastroFragment_to_telaProdutoFragmentFragment"
+        app:destination="@id/telaProdutoFragment" />
+    <action
+        android:id="@+id/action_telaCadastroFragment_to_telaFuncionarioFragment"
+        app:destination="@id/cadastro_funcionario" />
+
+    <action
+        android:id="@+id/action_telaCadastroFragment_to_cadastro_cliente1"
+        app:destination="@id/cadastro_cliente1" />
+
+  </fragment>
+
+</navigation>

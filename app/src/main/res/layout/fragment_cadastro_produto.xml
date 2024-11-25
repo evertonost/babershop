@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".FormLoginFragment">
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/fundoimg"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <View
+            android:id="@+id/containerComponentes"
+            style="@style/ContainerComponents_cadastro"
+            android:layout_width="400dp"
+            android:layout_height="502dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.454"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/logo"
+            app:layout_constraintVertical_bias="0.209" />
+
+        <ImageButton
+            android:id="@+id/btn1"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="30dp"
+            android:layout_weight="1"
+            android:background="@color/transparente"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/containerComponentes"
+            app:srcCompat="@drawable/ic_carrinho" />
+
+        <TextView
+            android:id="@+id/txtCadastrarServico"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="32dp"
+            android:gravity="center"
+            android:text="Cadastrar Produto"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:layout_constraintStart_toEndOf="@+id/btn1"
+            app:layout_constraintTop_toTopOf="@+id/containerComponentes" />
+
+
+
+        <EditText
+            android:id="@+id/Desc_produto"
+            style="@style/Edit_text_cadastro"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="30dp"
+            android:hint="Descricão do Produto"
+            android:inputType="textAutoComplete"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textCursorDrawable="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/txtCadastrarServico" />
+
+        <EditText
+            android:id="@+id/edit_codigo"
+            style="@style/Edit_text_cadastro"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:hint="Codigo Produto"
+            android:inputType="number"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textCursorDrawable="@color/white"
+            app:layout_constraintStart_toStartOf="@+id/containerComponentes"
+            app:layout_constraintTop_toBottomOf="@id/Desc_produto"
+            tools:ignore="MissingConstraints" />
+
+
+        <EditText
+            android:id="@+id/edit_fornecedor"
+            style="@style/Edit_text_cadastro"
+            android:layout_marginTop="20dp"
+            android:hint="Fornecedor"
+            android:inputType="textAutoComplete"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textCursorDrawable="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edit_codigo" />
+
+        <EditText
+            android:id="@+id/edit_custo"
+            style="@style/Edit_text_cadastro_meio"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:hint="Preço de Custo"
+            android:inputType="numberDecimal"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textCursorDrawable="@color/white"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@id/containerComponentes"
+            app:layout_constraintTop_toBottomOf="@id/edit_fornecedor" />
+
+
+        <EditText
+            android:id="@+id/edit_venda"
+            style="@style/Edit_text_cadastro_meio"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:hint="Preço de venda"
+            android:inputType="textAutoComplete"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textCursorDrawable="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/edit_custo"
+            app:layout_constraintTop_toBottomOf="@id/edit_fornecedor" />
+
+        <ImageView
+            android:id="@+id/imagemProduto"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="100dp"
+
+            android:clipToOutline="true"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.517"
+            app:layout_constraintStart_toEndOf="@+id/Desc_produto"
+            app:layout_constraintTop_toTopOf="@id/containerComponentes"
+            app:srcCompat="@drawable/pesquisar" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_foto"
+            style="@style/btn_foto"
+            android:layout_marginStart="40dp"
+            android:text="@string/btn_foto"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.714"
+            app:layout_constraintStart_toEndOf="@+id/edit_fornecedor"
+            app:layout_constraintTop_toBottomOf="@id/imagemProduto" />
+
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_Cadastrar"
+            style="@style/btn_cadastrar"
+            android:layout_marginTop="60dp"
+            android:text="Cadastrar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/edit_custo" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
